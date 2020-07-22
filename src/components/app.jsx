@@ -1,6 +1,7 @@
 import { Component } from 'preact'
 
 import Video from './video'
+import Image from './image'
 
 export default class App extends Component {
 	state = {
@@ -11,12 +12,19 @@ export default class App extends Component {
 		this.setState({ imageURL })
 	}
 
-	render() {
+	unsetImageURL = () => {
+		this.setState({ imageURL: null })
+	}
+
+	render({}, { imageURL }) {
+		const mode = imageURL
+			? <Image imageURL={imageURL} unsetImageURL={this.unsetImageURL} />
+			: <Video setImageURL={this.setImageURL} />
 		return (
 			<div class='container'>
 				<h1>Imagix</h1>
 				<h4>Capture Face Data!</h4>
-				<Video setImageURL={this.setImageURL} />
+				{mode}
 			</div>
 		)
 	}
