@@ -20,7 +20,6 @@ class Image extends Component {
     try {
       const response = await postImage(blob)
       const data = JSON.parse(response.response)
-      console.log(response)
       this.setState({ data })
     } catch (err) {
       console.log(err)
