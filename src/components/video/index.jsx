@@ -54,8 +54,9 @@ class Video extends Component {
   render () {
     return (
       <>
-        <video src='#' ref={this.video}> Video Feed Not Available! 😥 </video>
-        <button class='btn' onClick={this.selfie}>Capture Selfie</button>
+				<h4 class='mb-20'>Capture your face data by clicking a selfie 🤳</h4>
+        <video class='block my-0 mx-auto mb-10 rounded'src='#' ref={this.video}> Video Feed Not Available! 😥 </video>
+        <button class='p-8 bg-red-600 rounded-full border-solid border-8 border-gray-400' onClick={this.selfie} />
         <canvas class='absolute hidden'
         ref={this.canvas} />
       </>

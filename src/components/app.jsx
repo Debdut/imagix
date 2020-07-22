@@ -22,8 +22,7 @@ export default class App extends Component {
 			: <Video setImageURL={this.setImageURL} />
 		return (
 			<div class='container'>
-				<h1>Imagix</h1>
-				<h4>Capture Face Data!</h4>
+				<h1 class='m-10'>Imagix</h1>
 				{mode}
 			</div>
 		)
