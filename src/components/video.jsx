@@ -45,7 +45,7 @@ class Video extends Component {
     canvas.width = width
 
     context.drawImage(video, 0, 0, width, height)
-    const imageURL = canvas.toDataURL('image/png')
+    const imageURL = canvas.toDataURL('image/jpeg')
 
     this.stop()
     this.props.setImageURL(imageURL)
