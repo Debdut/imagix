@@ -1,5 +1,6 @@
 # imagix
 
+Detect Face Emotions, Age and other Metrics
 
 
 ## CLI Commands
